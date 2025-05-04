@@ -1,0 +1,179 @@
+/* 基本設定 */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50E3C2;
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --section-bg: #F8F9FA;
+    --header-text: #FFFFFF;
+    --transition-speed: 0.3s;
+}
+
+/* ダークモード用の変数 */
+.dark-theme {
+    --primary-color: #90caf9;
+    --secondary-color: #4db6ac;
+    --text-color: #eeeeee;
+    --background-color: #121212;
+    --section-bg: #1e1e1e;
+    --header-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ヘッダー */
+header {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* セクション共通 */
+section {
+    padding: 3rem;
+    margin-bottom: 3rem;
+    background-color: var(--section-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* プロフィールセクション */
+.profile-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+li::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* スキルセクション */
+.skills-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* テーマ切替ボタン */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all var(--transition-speed);
+}
+
+.dark-theme .theme-toggle {
+    color: var(--header-text);
+    border: 1px solid #000000;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+} 
