@@ -15,10 +15,40 @@
 .dark-theme {
     --primary-color: #90caf9;
     --secondary-color: #4db6ac;
-    --text-color: #eeeeee;
+    --text-color: #ffffff;
     --background-color: #121212;
     --section-bg: #1e1e1e;
     --header-text: #ffffff;
+}
+
+/* レッドモード用の変数 */
+.red-theme {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ff8787;
+    --text-color: #ffffff;
+    --background-color: #ff0000;
+    --section-bg: #ff3333;
+    --header-text: #ffffff;
+}
+
+/* ブルーモード用の変数 */
+.blue-theme {
+    --primary-color: #4dabf7;
+    --secondary-color: #339af0;
+    --text-color: #ffffff;
+    --background-color: #0000ff;
+    --section-bg: #1a75ff;
+    --header-text: #ffffff;
+}
+
+/* イエローモード用の変数 */
+.yellow-theme {
+    --primary-color: #ffd43b;
+    --secondary-color: #fcc419;
+    --text-color: #000000;
+    --background-color: #ffff00;
+    --section-bg: #ffeb3b;
+    --header-text: #000000;
 }
 
 * {
